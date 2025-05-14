@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.screen {
+    display: none; /* Hidden by default */
+}
+
+.screen.active {
+    display: block; /* Show active screen */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.menu-options button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.shop-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.shop-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#points-display, .points-display-dynamic {
+    font-weight: bold;
+    color: #28a745;
+}
+
+#slots-result, #plinko-result, #shop-message {
+    margin-top: 15px;
+    font-style: italic;
+    color: #666;
+}
