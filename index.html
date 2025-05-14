@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<div style='width:640px;height:480px;max-width:100%'>
-  <div id='game'></div>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Gamble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title Screen -->
+        <div id="title-screen" class="screen active">
+            <h1>AI Gamble</h1>
+            <button id="play-button">Play</button>
+        </div>
 
-<script type='text/javascript'>
+        <!-- Main Menu Screen -->
+        <div id="main-menu-screen" class="screen">
+            <h2>Main Menu</h2>
+            <p>Current Points: <span id="points-display">50</span></p>
+            <div class="menu-options">
+                <button id="slots-nav-button">Slots</button>
+                <button id="plinko-nav-button">Plinko</button>
+                <button id="shop-nav-button">Shop</button>
+            </div>
+        </div>
 
-  EJS_player = '#game';
-  EJS_core = 'melonds';  
-  EJS_gameUrl = 'sillyk.nds';
-  EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/';
+        <!-- Slots Game Screen (Placeholder) -->
+        <div id="slots-game-screen" class="screen">
+            <h2>Slots</h2>
+            <p>Current Points: <span class="points-display-dynamic">50</span></p>
+            <p>Spin the slots to win points!</p>
+            <button id="spin-slots-button">Spin (Cost: 5)</button>
+            <p id="slots-result"></p>
+            <button class="back-to-menu">Back to Main Menu</button>
+        </div>
 
-</script>
-<script src='https://cdn.jsdelivr.net/gh/ethanaobrien/emulatorjs@main/data/loader.js'></script>
+        <!-- Plinko Game Screen (Placeholder) -->
+        <div id="plinko-game-screen" class="screen">
+            <h2>Plinko</h2>
+            <p>Current Points: <span class="points-display-dynamic">50</span></p>
+            <p>Drop a ball to win points!</p>
+            <button id="drop-plinko-button">Drop Ball (Cost: 10)</button>
+            <p id="plinko-result"></p>
+            <button class="back-to-menu">Back to Main Menu</button>
+        </div>
+
+        <!-- Shop Screen -->
+        <div id="shop-screen" class="screen">
+            <h2>Shop</h2>
+            <p>Current Points: <span class="points-display-dynamic">50</span></p>
+            <div class="shop-item">
+                <h3>Point Multiplier</h3>
+                <p>Current Multiplier: <span id="current-multiplier-display">x1.0</span></p>
+                <p>Cost for next upgrade (+0.1x): <span id="multiplier-cost-display">100</span> Points</p>
+                <button id="buy-multiplier-button">Buy Multiplier Upgrade</button>
+                <p id="shop-message"></p>
+            </div>
+            <button class="back-to-menu">Back to Main Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
